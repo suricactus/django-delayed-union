@@ -197,7 +197,6 @@ class CountPostApplyMethod(PostApplyMethod):
         if obj._result_cache is not None:
             return len(obj._result_cache)
 
-        obj = obj.select_related(None)
         return super(CountPostApplyMethod, self).__call__(obj, *args, **kwargs)
 
 
